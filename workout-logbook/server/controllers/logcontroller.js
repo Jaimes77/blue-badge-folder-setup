@@ -17,20 +17,24 @@ router.post("/", validateSession, (req, res) => {
 
 //Get All Logs
 router.get("/", (req, res) => {
-  Log.findAll()
+  Log.findAll(
+    Log.findAll({
+      where: { owner_id: userid },
+    })
+  )
     .then((logs) => res.status(200).json(logs))
     .catch((err) => res.status(500).json({ error: err }));
 });
 
-//Get Logs By User
-router.get("/:id", validateSession, (req, res) => {
-  let userid = req.user.id;
-  Log.findAll({
-    where: { owner_id: userid },
-  })
-    .then((logs) => res.status(200).json(logs))
-    .catch((err) => res.status(500).json({ error: err }));
-});
+// //Get Logs By User
+// router.get("/:id", validateSession, (req, res) => {
+//   let userid = req.user.id;
+//   Log.findAll({
+//     where: { owner_id: userid },
+//   })
+//     .then((logs) => res.status(200).json(logs))
+//     .catch((err) => res.status(500).json({ error: err }));
+// });
 
 //Update log
 router.put("/:id", validateSession, function (req, res) {
