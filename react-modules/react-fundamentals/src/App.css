@@ -11,7 +11,7 @@ body {
 
 /* footer */
 footer {
-  background-color: #53565a;
+  background-color: #0d2d49;
   color: white;
   margin-top: 10px;
 }
@@ -37,7 +37,7 @@ footer p {
 
 .sidebar {
   display: flex;
-  background-color: #53565a;
+  background-color: #0d2d49;
   margin-top: 10px;
 }
 
@@ -50,7 +50,7 @@ ul {
   padding-left: 50px;
   padding-top: 15px;
   width: 20%;
-  background-color: #53565a;
+  background-color: #0d2d49;
   color: white;
 }
 
@@ -68,7 +68,7 @@ ul {
 .header {
   margin-top: 0.5em !important;
   text-align: center;
-  background-color: #53565a;
+  background-color: #0d2d49;
   color: white;
 }
 
