@@ -10,6 +10,7 @@ const Resources = () => {
           Note: You'll have one challenge where you will be asked to make this
           page better.
         </p>
+
         <ul>
           <li>
             <a
