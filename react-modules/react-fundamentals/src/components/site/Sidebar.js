@@ -9,6 +9,7 @@ import Effects from "../concepts/Effects";
 import PropsDemo from "../concepts/PropsDemo";
 import Hooks from "../concepts/Hooks";
 import TimePiecesApp from "../apps/timer-apps/TimePiecesApp";
+import NytApp from "../apps/nyt-app/NytApp";
 
 const Sidebar = () => (
   <div className="sidebar">
@@ -37,6 +38,9 @@ const Sidebar = () => (
         </li>
         <li>
           <Link to="/timer">Timers</Link>
+        </li>
+        <li>
+          <Link to="/nyt-app">NYT App</Link>
         </li>
         <li>
           <Link to="/resources">Resources</Link>
@@ -74,6 +78,9 @@ const Sidebar = () => (
         </Route>
         <Route exact path="/timer">
           <TimePiecesApp />
+        </Route>
+        <Route exact path="/nyt-app">
+          <NytApp />
         </Route>
       </Switch>
     </div>

@@ -73,4 +73,4 @@ const useClicks = (initCount) => {
   }, [clicks]);
   return [clicks, setClicks];
 };
-export default Hooks2;
+export default Hooks;
