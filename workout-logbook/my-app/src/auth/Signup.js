@@ -5,7 +5,7 @@ const Signup = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  let handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     fetch("http://localhost:3000/user/register", {
       method: "POST",
@@ -20,7 +20,6 @@ const Signup = (props) => {
       .then((data) => {
         props.updateToken(data.sessionToken);
       });
-    console.log(username, password);
   };
 
   return (
