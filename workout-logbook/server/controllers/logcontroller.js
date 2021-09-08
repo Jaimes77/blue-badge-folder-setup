@@ -16,7 +16,7 @@ router.post("/", validateSession, (req, res) => {
 });
 
 //Get All Logs
-router.get("/", (req, res) => {
+router.get("/", validateSession, (req, res) => {
   Log.findAll({
     where: { owner_id: req.user.id },
   })

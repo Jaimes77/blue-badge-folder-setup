@@ -23,6 +23,7 @@ router.post("/register", function (req, res) {
 });
 
 //user login
+
 router.post("/login", function (req, res) {
   User.findOne({
     where: {
@@ -33,7 +34,7 @@ router.post("/login", function (req, res) {
       if (user) {
         bcrypt.compare(
           req.body.user.passwordhash,
-          user.password,
+          user.passwordhash,
           function (err, matches) {
             if (matches) {
               let token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
